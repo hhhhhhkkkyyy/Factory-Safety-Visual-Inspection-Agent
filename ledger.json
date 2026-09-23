@@ -1,0 +1,53 @@
+{
+  "危险品仓库": {
+    "person_in_charge": "王XX",
+    "contact": "13700137000",
+    "risk_base_level": "极高风险区域",
+    "forbidden_objects": ["person", "suitcase", "bottle", "backpack", "chair", "potted plant", "motorcycle", "car", "bicycle"],
+    "hazard_mapping": {
+      "person": {"type": "area_intrusion", "level": "高危告警", "desc": "人员违规闯入危险品仓库"},
+      "suitcase": {"type": "channel_stack", "level": "高危告警", "desc": "行李箱/杂物堵塞通道"},
+      "bottle": {"type": "channel_stack", "level": "高危告警", "desc": "瓶装可燃物/杂物"},
+      "backpack": {"type": "channel_stack", "level": "高危告警", "desc": "背包/包裹堵塞通道"},
+      "chair": {"type": "channel_stack", "level": "高危告警", "desc": "杂物堵塞消防通道"},
+      "potted plant": {"type": "channel_stack", "level": "一般隐患", "desc": "盆栽占用通道"},
+      "motorcycle": {"type": "channel_stack", "level": "高危告警", "desc": "摩托车违规停放"},
+      "car": {"type": "channel_stack", "level": "高危告警", "desc": "车辆违规占用通道"},
+      "bicycle": {"type": "channel_stack", "level": "一般隐患", "desc": "自行车占用通道"}
+    },
+    "safety_rule": "通道禁止堆放任何物品，发现人员闯入或堆物后10分钟内通知责任人现场处置。",
+    "risk_rule": {"no_helmet": "高危告警", "channel_stack": "高危告警", "area_intrusion": "高危告警"}
+  },
+  "一号车间北区": {
+    "person_in_charge": "张XX",
+    "contact": "13800138000",
+    "risk_base_level": "一般风险车间",
+    "forbidden_objects": ["person", "suitcase", "backpack", "chair"],
+    "hazard_mapping": {
+      "person": {"type": "area_intrusion", "level": "高危告警", "desc": "非工作时间人员闯入"},
+      "suitcase": {"type": "channel_stack", "level": "一般隐患", "desc": "行李/杂物占用通道"},
+      "backpack": {"type": "channel_stack", "level": "一般隐患", "desc": "背包占用通道"},
+      "chair": {"type": "channel_stack", "level": "一般隐患", "desc": "座椅占用通道"},
+      "bottle": {"type": "normal_item", "level": "无", "desc": "饮用水瓶，正常物品"},
+      "potted plant": {"type": "normal_item", "level": "无", "desc": "绿化盆栽，正常物品"}
+    },
+    "safety_rule": "非工作时间禁止人员进入；工作时间通道允许少量杂物，但不得堵塞消防通道。",
+    "risk_rule": {"no_helmet": "高危告警", "channel_stack": "一般隐患", "area_intrusion": "高危告警"}
+  },
+  "一号车间南区": {
+    "person_in_charge": "李XX",
+    "contact": "13900139000",
+    "risk_base_level": "一般风险车间",
+    "forbidden_objects": ["person", "suitcase"],
+    "hazard_mapping": {
+      "person": {"type": "area_intrusion", "level": "高危告警", "desc": "人员违规闯入"},
+      "suitcase": {"type": "channel_stack", "level": "一般隐患", "desc": "杂物占用通道"},
+      "bottle": {"type": "normal_item", "level": "无", "desc": "正常物品"},
+      "chair": {"type": "normal_item", "level": "无", "desc": "办公座椅，正常"},
+      "potted plant": {"type": "normal_item", "level": "无", "desc": "绿化植物，正常"},
+      "clock": {"type": "normal_facility", "level": "无", "desc": "时钟，正常设施"}
+    },
+    "safety_rule": "常规安全巡检，通道保持畅通即可。",
+    "risk_rule": {"no_helmet": "高危告警", "channel_stack": "一般隐患", "area_intrusion": "高危告警"}
+  }
+}
